@@ -96,6 +96,47 @@
 
             }
 
+            Console.WriteLine("Hämtat och utskrivet med list\n" +
+                "*************************");
+            List<Employee> employees1 = new List<Employee>();
+            employees1.Add(E1);
+            employees1.Add(E2);
+            employees1.Add(E3);
+            employees1.Add(E4);
+            employees1.Add(E5);
+
+            if (employees1.Contains(E2))
+            {
+                Console.WriteLine("Employee 2 finns i listan\n");
+            }
+            else
+            {
+                Console.WriteLine("Employee 2 finns inte i listan\n");
+            }
+
+            var male1 = employees1.Find(employee => employee.Gender == "M");
+
+            if (male1 != null)
+            {
+                Console.WriteLine($"Första mannen i listan:\n" +
+                    $"ID: {male1.Id} \nName: {male1.Name} \nGender: {male1.Gender} \nSalary: {male1.Salary}\n");
+            }
+
+
+            var allMale = employees1.FindAll(employee => employee.Gender == "M");
+            Console.WriteLine("Alla män i listan:");
+            foreach(var males in allMale)
+            {
+                Console.WriteLine($"ID: {males.Id} \nName: {males.Name} \nGender: {males.Gender} \nSalary: {males.Salary}\n");
+
+
+            }
+
+
+
+
+
+
         }
     }
 }
