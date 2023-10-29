@@ -4,36 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Employee E1 = new Employee();
-            E1.Id = 146;
-            E1.Name = "Adrian";
-            E1.Gender = "M";
-            E1.Salary = 27500;
+            //Skapar 5 employees
 
-            Employee E2 = new Employee();
-            E2.Id = 212;
-            E2.Name = "Agnes";
-            E2.Gender = "F";
-            E2.Salary = 36000;
+            Employee E1 = new Employee(146,"Adrian","M",27500);
+            
+            Employee E2 = new Employee(212,"Agnes","F",36000);
 
-            Employee E3 = new Employee();
-            E3.Id = 353;
-            E3.Name = "Andreas";
-            E3.Gender = "M";
-            E3.Salary = 30000;
+            Employee E3 = new Employee(353,"Andreas","M",30000);
 
-            Employee E4 = new Employee();
-            E4.Id = 434;
-            E4.Name = "Oliver";
-            E4.Gender = "M";
-            E4.Salary = 21000;
+            Employee E4 = new Employee(434,"Oliver","M",21000);
 
-            Employee E5 = new Employee();
-            E5.Id = 567;
-            E5.Name = "William";
-            E5.Gender = "M";
-            E5.Salary = 50000;
+            Employee E5 = new Employee(567,"William","M",50000);
 
+            //Skapar en stack med Employee som datatyp(?) då det som skapas kommer använda de som Employee använder.
             Stack<Employee> employees = new Stack<Employee>();
             employees.Push(E1);
             employees.Push(E2);
@@ -67,8 +50,6 @@
             employees.Push(E3);
             employees.Push(E4);
             employees.Push(E5);
-
-
 
             Console.WriteLine("Hämtat med Peek-metoden\n" +
                 "*************************");
@@ -131,12 +112,6 @@
 
 
             }
-
-
-
-
-
-
         }
     }
 }
